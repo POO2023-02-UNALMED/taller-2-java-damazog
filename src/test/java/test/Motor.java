@@ -1,4 +1,4 @@
-package paquete;
+package test;
 
 public class Motor {
 	int numeroCilindros;
