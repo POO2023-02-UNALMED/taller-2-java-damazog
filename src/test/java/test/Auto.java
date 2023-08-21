@@ -13,8 +13,10 @@ public class Auto {
 		int cantidad=0;
 		Asiento c = new Asiento();
 		 for (Asiento element : asientos) {
-			 if (element.getClass() == c.getClass()) {
-				 cantidad++;
+			 if (element != null) {
+				 if (element.getClass() == c.getClass()) {
+					 cantidad++;
+				 }
 			 }
 		 }
 		 return cantidad;
@@ -25,9 +27,11 @@ public class Auto {
 			return "Las piezas no son originales";
 		}
 		for (Asiento element : asientos) {
-			if (element.registro!=this.registro) {
-			return "Las piezas no son originales";
-			}
+			 if (element != null) {
+				 if (element.registro!=this.registro) {
+						return "Las piezas no son originales";
+						}
+			 }
 		}
 		return "Auto original";
 	}
